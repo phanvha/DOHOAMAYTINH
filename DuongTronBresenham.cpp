@@ -1,6 +1,8 @@
-#include <winbgim.h>
+#include<iostream>
+#include<winbgim.h>
+#include<math.h>
 #include<conio.h>
-#define DELAY 10
+//thuat toan ve duong tron bresenham
 void ve8diem(int x0,int y0,int x, int y, int color)
 {
   putpixel( x0 + x , y0 + y ,color);
@@ -12,7 +14,6 @@ void ve8diem(int x0,int y0,int x, int y, int color)
   putpixel( x0 + y , y0 - x ,color);
   putpixel( x0 - y , y0 - x ,color);
 }
-
 void circle(int x0,int y0,int r)
 {
   int x=0;int y=r;
@@ -20,7 +21,7 @@ void circle(int x0,int y0,int r)
   while (x<=y)
   {
    ve8diem(x0,y0,x,y,15);
-   if(p<0) p=p+4*x+6;
+   if(p < 0) p=p+4*x+6;
    else
        {
             p=p+4*(x-y)+10;
@@ -29,10 +30,14 @@ void circle(int x0,int y0,int r)
    x=x+1;
   }
 }
-int main(){
-    int x1,y1,x2,y2;
-    int gd,gm=VGAMAX; gd=DETECT;
-    initgraph(&gd,&gm,NULL);
-    circle(200,200,100);
-    return 0;
+int main()
+{
+	int gd = DETECT, gm;
+	initgraph(&gd, &gm, "c:\\tc\\bgi");
+ 
+	circle(200, 200, 100);
+ 
+	Sleep(3000);
+	closegraph();
+	return 0;	
 }

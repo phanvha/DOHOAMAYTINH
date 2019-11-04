@@ -2,7 +2,7 @@
 #include<winbgim.h>
 #include<math.h>
 #include<conio.h>
-
+//thuat toan ve duong tron midpoint
 void put8pixel(int xc, int yc, int x, int y, int color)
 {
     putpixel(x + xc, y + yc, color);

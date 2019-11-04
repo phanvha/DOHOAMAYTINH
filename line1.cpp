@@ -25,13 +25,28 @@ void midpoint(int x1,int y1,int x2, int y2,int color){
         delay(10);
     }
 }
+void rotate()
+{
+		
+}
+
  
  
 int main(){
-    initwindow(900,700);
-    //khoi tao window có chieu rong x=400 và chieu cao y = 500
+    initwindow(1000,1000);
+
+	line(50,100,100,50);
+	line(100,50,200,100);
+	line(200,100,50,100);
+	line(50+100,100+200,100+100,50+200);
+	line(100+100,50+200,200+100,100+200);
+	line(200+100,100+200,50+100,100+200);
+    
     setwindowtitle("Thuat toan Line Midpoint");  
       //thiet   lap tieu    de  cho windows
-    midpoint(20,20,600,600,10);
+    midpoint(20,50,100,100,10);
+    midpoint(20-20,50-50,100-20,100-50,10);
     getch();
+    return true;
 }
+
