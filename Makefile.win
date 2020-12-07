@@ -1,15 +1,15 @@
-# Project: sample2
+# Project: detai
 # Makefile created by Dev-C++ 5.4.1
 
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = sample2.o
-LINKOBJ  = sample2.o
-LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW32/lib" -static-libstdc++ -static-libgcc -lbgi -lgdi32 -luser32
+OBJ      = detai.o
+LINKOBJ  = detai.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW32/lib" -static-libstdc++ -static-libgcc -lglut32 -lglu32 -lopengl32 -lwinmm -lgdi32 
 INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW32/include"
 CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW32/include"
-BIN      = sample2.exe
+BIN      = detai.exe
 CXXFLAGS = $(CXXINCS) 
 CFLAGS   = $(INCS) 
 RM       = rm -f
@@ -25,5 +25,5 @@ clean: clean-custom
 $(BIN): $(OBJ)
 	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
 
-sample2.o: sample2.cpp
-	$(CPP) -c sample2.cpp -o sample2.o $(CXXFLAGS)
+detai.o: detai.cpp
+	$(CPP) -c detai.cpp -o detai.o $(CXXFLAGS)
